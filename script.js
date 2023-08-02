@@ -1,27 +1,23 @@
-let numContainer = document.getElementById('num');
+const numContainer = document.getElementById('num');
+const btnInc = document.querySelector('.inc');
+const btnDec = document.querySelector('.dec');
+const btnReset = document.querySelector('.reset');
 let value = 0;
-let btnInc = document.querySelector('.inc');
-let btnDec = document.querySelector('.dec');
-let btnReset = document.querySelector('.reset');
 
 btnInc.addEventListener("click", () => {
-    // value++;
-    numContainer.textContent = ++value; 
-    console.log("add " + value);
+    value++;
+    numContainer.textContent = value;
 });
 
 btnDec.addEventListener("click", () => {
-    // value--;
-    numContainer.textContent = --value; 
-    console.log("minus " + value);
+    value--;
+    numContainer.textContent = value;
 
 });
 
 btnReset.addEventListener("click", () => {
     value = 0;
-    numContainer.textContent = value; 
-    console.log("reset " + value);
-
+    numContainer.textContent = value;
 });
 
 
